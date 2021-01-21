@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="countryName" value="Brazil"></parameter>
+	<parameter name="userName" value="TestIntegrationUser"></parameter>
+	<parameter name="gender" value="Female"></parameter>
+	<parameter name="product1" value="Air Jordan 4 Retro"></parameter>
+	<parameter name="product2" value="Air Jordan 1 Mid SE"></parameter>
+
+	<test thread-count="5" name="TestIntegration">
+		<classes>
+			<class name="com.qa.TestCases.TestRunIntegration" />
+		</classes>
+	</test>
+
+	<listeners>
+		<listener class-name="com.qa.TestReports.ExtentReportFile"></listener>
+	</listeners>
+
+</suite> <!-- Suite -->
