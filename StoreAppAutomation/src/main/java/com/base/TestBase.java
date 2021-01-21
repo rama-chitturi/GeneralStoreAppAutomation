@@ -31,7 +31,7 @@ public class TestBase {
 	}
 
 
-	public static void appConfig() throws MalformedURLException
+	public void appConfig() throws MalformedURLException
 	{
 		DesiredCapabilities capObj = new DesiredCapabilities();
 		capObj.setCapability("deviceName",prop.getProperty("deviceName"));
@@ -42,7 +42,6 @@ public class TestBase {
 		driver = new AndroidDriver<MobileElement>(new URL(prop.getProperty("remoteAddrs")), capObj);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
-
 
 }
 
